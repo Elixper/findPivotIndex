@@ -2,6 +2,21 @@
  * @param {number[]} nums
  * @return {number}
  */
+
+let arr = [1,-1,4, 1,-1]
+let arr1 = [...arr]
+let arr2 = [...arr]
+console.log(arr1.slice(index-1))
+console.log(arr2.slice(0).reduce((acc,val) => acc + val))
+for ( let ind in arr) {
+  if (arr1.slice(ind-1).reduce((acc,val) => acc + val) === arr2.slice(ind+1).arr.reduce((acc,val) => acc + val)) {
+    console.log(ind)
+  }
+}
+
+
+
+
 var pivotIndex = (nums) => {
 // verifier à chaque indice que la somme à droite est égale à la somme à gauche
 // index de 1 à 6 
