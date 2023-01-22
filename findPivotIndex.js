@@ -18,11 +18,5 @@ const check = (arr) => {
   }
 }
 }
-return(!check(arr))?-1:check(arr)
+return check(arr)&&check(arr)<arr.length||check(arr)===0?check(arr):-1
 }
-// console.log(findPivotIndex([1, 7, 3, 6, 5, 6]));
-// const check = (arr) => {
-// return(!findPivotIndex(arr))?-1:findPivotIndex(arr)
-// }
-console.log(findPivotIndex([1, 7, 3, 6, 5, 6]))
-console.log(findPivotIndex([2,1,-1]))
