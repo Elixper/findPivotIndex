@@ -3,11 +3,8 @@
  * @return {number}
  */
 
-let arr = [0,1,-1]
-console.log(arr.slice(0,3))
-
-
 const findPivotIndex = (arr) => {
+const check = (arr) => {
   let sumArray = (arr) => {
     let sum = 0
     arr.forEach(el => sum+=el)
@@ -18,13 +15,14 @@ const findPivotIndex = (arr) => {
     let rightArray = arr.slice(i+1,arr[arr.length])
     if (sumArray(leftArray) === sumArray(rightArray)) {
       return i
-    // } else {
-    //   return "not found"
-    // }
-    // console.log(i,leftArray,sumArray(leftArray)===sumArray(rightArray))
-    // console.log(i,rightArray)
   }
 }
 }
-// console.log(findPivotIndex(arr)) 
-console.log(findPivotIndex([1, 7, 3, 6, 5, 6]));
+return(!check(arr))?-1:check(arr)
+}
+// console.log(findPivotIndex([1, 7, 3, 6, 5, 6]));
+// const check = (arr) => {
+// return(!findPivotIndex(arr))?-1:findPivotIndex(arr)
+// }
+console.log(findPivotIndex([1, 7, 3, 6, 5, 6]))
+console.log(findPivotIndex([2,1,-1]))
